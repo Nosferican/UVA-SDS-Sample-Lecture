@@ -5,4 +5,4 @@ This repository contains a sample syllabus and lesson material for the "on-campu
 [![][ddi]][ddu]
 
 [ddi]: https://img.shields.io/badge/Website-DS6015-informational?style=plastic
-[ddu]: https://nosferican.github.io/uva-sds-sample-lecture/dev/
+[ddu]: https://nosferican.github.io/UVA-SDS-Sample-Lecture/dev/

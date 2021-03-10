@@ -119,6 +119,10 @@ which yields something like
 
     Using variables allows to keep code DRY.
 
+!!! info
+
+    Compared to the REST endpoint, the GraphQL allows to not overfetch.
+
 ### Primary Language
 
 Find the programming language for the repositories above.
@@ -178,6 +182,10 @@ query Description($ids: [ID!]!) {
 !!! tip
 
     You can use fragments to achieve cleaner queries.
+
+!!! info
+
+    Compared to a REST framework, one can query multiple nodes (e.g., 100 nodes per `nodes` and multiple aliased nodes) allowing for an efficiency gain of tens of thousands.
 
 ### Commits
 
@@ -426,6 +434,14 @@ yields
 
     You can set up the structure for pagination during the initial request.
 
+!!! info
+
+    Notice that through REST endpoints one would need to access multiple resources through multiple requests.
+
+!!! warning
+
+    GraphQL may have hard limits on the cost of the query and possible number of data points, but most likely one may incur in a timeout when requesting too much data and those limits are not known until execution time.
+
 For paginating, we can adapt the code by passing the cursors as variables.
 
 ```
@@ -607,3 +623,11 @@ Convert the pipeline from the graphical user interface to a program using your f
 !!! tip
 
     Using your favorite programming language get familiar with the available GraphQL client packages. You will likely also want to use a JSON library for reading the payload.
+
+!!! tip
+
+    You can mix and match REST and GraphQL functionality as needed. For example, some features might only be available through a REST endpoint or may be more efficient (e.g., conditional requests, no cost queries). Consider using https://api.github.com/rate_limit for querying and managing your rate limits in your program.
+
+!!! tip
+
+    Try querying for a repository or user that is not available (e.g., is not public) to discover the behavior and develop an "error handling" strategy.

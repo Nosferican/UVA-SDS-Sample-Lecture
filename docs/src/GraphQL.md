@@ -28,6 +28,10 @@ GraphQL is a query language for your API that serves as an alternative to REST. 
 
 ## Code Along
 
+!!! tip
+
+    Be sure to check out the documentation explorer and provided hints by the GUI while learning the GraphQL language and new API.
+
 ### Search
 
 Using the [search syntax](https://docs.github.com/en/github/searching-for-information-on-github/understanding-the-search-syntax), find the:
@@ -107,9 +111,13 @@ which yields something like
 }
 ```
 
-**Tips**
-- Pay attention to being explicit with the timezones.
-- Using variables allows to keep code DRY
+!!! warning
+
+    Pay attention to being explicit with the timezones.
+
+!!! tip
+
+    Using variables allows to keep code DRY.
 
 ### Primary Language
 
@@ -163,10 +171,13 @@ query Description($ids: [ID!]!) {
 }
 ```
 
-**Tips**
+!!! tip
 
-- When requerying, it is best to use the global node ID.
-- You can use fragments to achieve cleaner queries.
+    When requerying, it is best to use the global node ID.
+
+!!! tip
+
+    You can use fragments to achieve cleaner queries.
 
 ### Commits
 
@@ -406,8 +417,14 @@ yields
 ```
 
 **Tips**
-- Aliasing allows you to reduce the number of requests needed to collect the information you want.
-- You can set up the structure for pagination from your initial request.
+
+!!! tip
+
+    Aliasing allows you to reduce the number of requests needed to collect the information you want.
+
+!!! info
+
+    You can set up the structure for pagination during the initial request.
 
 For paginating, we can adapt the code by passing the cursors as variables.
 
@@ -575,10 +592,18 @@ query CommitsOfInterest($x: GitTimestamp!, $y: GitTimestamp!, $z: GitTimestamp!,
 }
 ```
 
-**Tips**
-- When paginating outside the range, the `endCursor` is null.
-- Edges can be empty if there are no results.
+!!! info
+
+    When paginating outside the range, the `endCursor` is null.
+
+!!! info
+
+    Edges can be empty if there are no results.
 
 ## Class Exercise
 
 Convert the pipeline from the graphical user interface to a program using your favorite GraphQL [client implementations](https://graphql.org/code/). Get familiar with programatically paginating results.
+
+!!! tip
+
+    Using your favorite programming language get familiar with the available GraphQL client packages. You will likely also want to use a JSON library for reading the payload.

@@ -1,7 +1,7 @@
 using Documenter
 
 makedocs(sitename = "DS6015",
-         source = joinpath("docs", "src"),
+         # source = joinpath("docs", "src"),
          pages = [
             "Syllabus" => "index.md",
             "GraphQL" => "GraphQL.md",

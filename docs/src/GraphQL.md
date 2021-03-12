@@ -42,7 +42,7 @@ Using the [search syntax](https://docs.github.com/en/github/searching-for-inform
 for three repositories that meet the following criteria:
 
 - is a public repository
-- created between 2021-01-01 and 2021-01-05
+- created during the first five days of 2021
 - is Zlib licensed
 
 #### Solution
@@ -66,7 +66,7 @@ query DefaultBranch($query: String!, $type: SearchType!, $first: Int) {
 ```
 ```
 {
-    "query": "is:public license:zlib created:2021-01-01T00:00:00Z..2021-01-05T00:00:00Z",
+    "query": "is:public license:zlib created:2021-01-01T00:00:00Z..2021-01-06T00:00:00Z",
     "type": "REPOSITORY",
     "first": 3
 }
